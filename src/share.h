@@ -179,7 +179,7 @@ public:
 	virtual BOOL	EvCreate(LPARAM lParam);
 	virtual BOOL	EvCommand(WORD wNotifyCode, WORD wID, LPARAM hwndCtl);
 	virtual BOOL	EventApp(UINT uMsg, WPARAM wParam, LPARAM lParam);
-	virtual void	EndDialog(int) {}	// 無視させる
+	virtual void	EndDialog(int) {}	// noused
 };
 
 class TShareStatDlg : public TDlg {

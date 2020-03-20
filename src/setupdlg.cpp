@@ -378,10 +378,10 @@ BOOL TSetupSheet::SetData()
 		SendDlgItemMessage(MULTICAST_COMBO, CB_ADDSTRING, 0, (LPARAM)"SiteLocal only");
 		SendDlgItemMessage(MULTICAST_COMBO, CB_SETCURSEL, cfg->MulticastMode, 0);
 
-		if (cfg->lcid != -1 || GetSystemDefaultLCID() == 0x411) {
+		if (cfg->lcid != -1 || GetSystemDefaultLCID() == 0x411 || GetSystemDefaultLCID() == 0x404) {
 			::ShowWindow(GetDlgItem(LCID_CHECK), SW_SHOW);
 			::EnableWindow(GetDlgItem(LCID_CHECK), TRUE);
-			CheckDlgButton(LCID_CHECK, cfg->lcid == -1 || cfg->lcid == 0x411 ? FALSE : TRUE);
+			CheckDlgButton(LCID_CHECK, cfg->lcid == -1 || cfg->lcid == 0x411 || cfg->lcid == 0x404 ? FALSE : TRUE);
 		}
 	}
 	else if (resId == DETAIL_SHEET) {
