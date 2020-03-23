@@ -148,7 +148,8 @@ BOOL TSendDlg::EvCreate(LPARAM lParam)
 		else if (replyList.size() >= 1) {
 			repFilCheck.Show();
 			repFilDisp = true;
-			SetWindowText("Send Message (for Reply)");
+			// SetWindowText("Send Message (for Reply)");
+			SetWindowTextU8(LoadStrU8(IDS_REPLY_WINDOW_TITLE));
 			SetReplyInfoTip();
 		}
 	}

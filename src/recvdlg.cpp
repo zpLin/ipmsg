@@ -345,7 +345,8 @@ BOOL TRecvDlg::EvCreate(LPARAM lParam)
 	SetWindowTextU8(title);
 
 	char	head2[MAX_NAMEBUF];
-	sprintf(head2, "at %s", Ctime(&msg.timestamp));
+	// "at %s"
+	sprintf(head2, LoadStrU8(IDS_RECV_DLG_AT), Ctime(&msg.timestamp));
 	SetDlgItemTextU8(RECV_HEAD2, head2);
 
 	editSub.ExSetText(msg.msgBuf.s());

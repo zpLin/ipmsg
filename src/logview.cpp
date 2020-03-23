@@ -260,7 +260,8 @@ BOOL TLogView::EvCreate(LPARAM lParam)
 	if (!isMain) {
 		WCHAR	title[MAX_BUF];
 		GetWindowTextW(title, wsizeof(title));
-		wcscat(title, L" (Sub Window)");
+		//wcscat(title, L" (Sub Window)");
+		wcscat(title, LoadStrW(IDS_SUB_WINDOW_TITLE));
 		SetWindowTextW(title);
 	}
 

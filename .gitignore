@@ -1,0 +1,12 @@
+/x64
+/obj
+/Debug
+/Release
+/external/sqlite3/Debug
+/src/ipcmd/x64
+/src/install/x64
+/src/TLib/Obj
+/src/TLib/x64
+/src/uninst/x64
+/external/zlib/x64
+/.vs
